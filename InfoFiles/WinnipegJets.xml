@@ -1,0 +1,12 @@
+<?xml version = "1.0"?>
+  <covers>
+      <baseurl>http://test.deitel.com/images/thumbs/InfoFiles/</baseurl>
+  	  <cover>
+        <image>WinnipegJets.png</image>
+        <title>WinnipegJets</title>
+        <body> The Winnipeg Jets are a professional ice hockey team based in Winnipeg, Manitoba, Canada.
+     True North Sports and Entertainment owns the franchise, which plays its home games at Canada Life Centre,
+      formerly Bell MTS Place and MTS Centre.
+        </body>
+      </cover>
+  </covers>

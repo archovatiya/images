@@ -1,0 +1,14 @@
+<?xml version = "1.0"?>
+  <covers>
+      <baseurl>http://test.deitel.com/images/thumbs/InfoFiles/</baseurl>
+  	  <cover>
+         <image>TorontoRaptors.jpg</image>
+         <title>TorontoRaptors</title>
+         <body>  The Toronto Raptors are a basketball club headquartered in Toronto, Ontario, Canada.
+     The Toronto Raptors are a member of the Eastern Conference's Atlantic Division in the National Basketball Association (NBA). 
+     They share Scotiabank Arena with the Toronto Maple Leafs of the National Hockey League, and they play their home games there (NHL).
+      The club, along with the Vancouver Grizzlies, was established in 1995 as part of the NBA's expansion into Canada. 
+      Since the Grizzlies relocated from Vancouver to Memphis, Tennessee in 2001-2002, the Raptors have been the league's only Canadian-based franchise.
+        </body>
+      </cover>
+  </covers>

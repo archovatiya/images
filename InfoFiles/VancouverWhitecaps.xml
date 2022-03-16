@@ -1,0 +1,15 @@
+<?xml version = "1.0"?>
+  <covers>
+      <baseurl>http://test.deitel.com/images/thumbs/InfoFiles/</baseurl>
+  	  <cover>
+        <image>VancouverWhitecaps.png</image>
+        <title>VancouverWhitecaps</title>
+        <body>  The Vancouver Whitecaps FC is a professional soccer team headquartered in Vancouver, British Columbia, Canada. 
+    As a member of the league's Western Conference, they participate in Major League Soccer (MLS). 
+    They were founded on March 18, 2009, and began play in 2011 as the city's 17th Major League Soccer franchise, replacing the same-named USSF Division 2 team. 
+    Following graduating from the USSF after the 2010 season, the club has been owned and managed by the same group since their USSF days. 
+    The team's MLS edition is a phoenix club, and it's the third to have the Whitecaps moniker. 
+    The squad became the first Canadian team to qualify for the MLS Cup Playoffs in 2012.
+        </body>
+      </cover>
+  </covers>

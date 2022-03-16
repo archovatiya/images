@@ -1,0 +1,16 @@
+<?xml version = "1.0"?>
+  <covers>
+      <baseurl>http://test.deitel.com/images/thumbs/InfoFiles/</baseurl>
+  	  <cover>
+         <image>TorontoMapleLeafs.png</image>
+         <title>TorontoMapleLeafs</title>
+         <body> The Toronto Maple Leafs (formally the Toronto Maple Leaf Hockey Club) are a professional ice hockey team headquartered in Toronto.
+     They are a member of the Atlantic Division of the Eastern Conference of the National Hockey League (NHL).
+      Maple Leaf Sports and Entertainment, which owns numerous professional sports teams in the city, owns the club.
+       The broadcasting rights for the Maple Leafs are divided between BCE Inc. and Rogers Communications. Before moving to Maple Leaf Gardens in 1931,
+        the club played its home games at Mutual Street Arena for the first 14 seasons. In February 1999, the Maple Leafs moved to their current home, 
+        Scotiabank Arena (formerly known as Air Canada Centre).
+        </body>
+      </cover>
+     
+  </covers>

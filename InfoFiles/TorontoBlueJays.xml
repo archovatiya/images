@@ -1,0 +1,14 @@
+<?xml version = "1.0"?>
+  <covers>
+      <baseurl>http://test.deitel.com/images/thumbs/InfoFiles/</baseurl>
+  	  <cover>
+         <image>TorontoBlueJays.png</image>
+         <title>TorontoBlueJays</title>
+         <body> The Toronto Blue Jays are a professional baseball club from Toronto, Canada. Due to border restrictions imposed by the COVID-19 epidemic,
+ the club played its home games in TD Ballpark in Dunedin, Florida for April and May of the 2021 season,
+  and Sahlen Field in Buffalo, New York for the 2020 season as well as June and July 2021,
+   before returning to Toronto on July 30.
+        </body>
+      </cover>
+
+  </covers>

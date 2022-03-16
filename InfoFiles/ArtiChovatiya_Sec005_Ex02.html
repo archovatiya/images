@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<!-- Fig. 16.8: PullImagesOntoPage.html -->
+<!-- Image catalog that uses Ajax to request XML data asynchronously. -->
+<html>
+<head>
+<meta charset="utf-8">
+<title> Pulling Images onto the Page </title>
+<style type = "text/css">
+   li { display: inline-block; padding: 4px; width: 120px; }
+   img { border: 1px solid black }
+</style>
+<script>
+   var asyncRequest; // variable to hold XMLHttpRequest object
+
+   // set up and send the asynchronous request to get the XML file
+   function getImages( url )
+   {
+      // attempt to create XMLHttpRequest object and make the request
+      try
+      {
+         asyncRequest = new XMLHttpRequest(); // create request object
+
+         // register event handler
+         asyncRequest.addEventListener(
+            "readystatechange", processResponse, false); 
+         asyncRequest.open( "GET", url, true ); // prepare the request
+         asyncRequest.send( null ); // send the request
+      } // end try
+      catch ( exception )
+      {
+         alert( "Request Failed" );
+      } // end catch
+   } // end function getImages
+   
+   // parses the XML response; dynamically creates an undordered list and 
+   // populates it with the response data; displays the list on the page
+   function processResponse()
+   {
+      // if request completed successfully and responseXML is non-null
+      if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 && 
+         asyncRequest.responseXML )
+      {
+         clearImages(); // prepare to display a new set of images
+
+         // get the covers from the responseXML
+         var covers = asyncRequest.responseXML.getElementsByTagName(
+            "cover" )
+
+         // get base URL for the images
+         var baseUrl = asyncRequest.responseXML.getElementsByTagName( 
+            "baseurl" ).item( 0 ).firstChild.nodeValue;
+         
+         // get the placeholder div element named covers
+         var output = document.getElementById( "covers" );
+         
+         // create an unordered list to display the images
+         var imagesUL = document.createElement( "ul" );
+         
+         // place images in unordered list
+         for ( var i = 0; i < covers.length; ++i )
+         {
+            var cover = covers.item( i ); // get a cover from covers array
+         
+            // get the image filename
+            var image = cover.getElementsByTagName( "image" ).
+               item( 0 ).firstChild.nodeValue;
+         
+            // create li and img element to display the image
+            var imageLI = document.createElement( "li" );
+            var imageTag = document.createElement( "img" );
+            
+            // set img element's src attribute
+            imageTag.setAttribute( "src", baseUrl + escape( image ) ); 
+            imageLI.appendChild( imageTag ); // place img in li
+            imagesUL.appendChild( imageLI ); // place li in ul
+         } // end for statement
+
+         output.appendChild( imagesUL ); // append ul to covers div
+      } // end if 
+   } // end function processResponse
+
+   // clears the covers div
+   function clearImages()
+   {
+      document.getElementById( "covers" ).innerHTML = ""; 
+   } // end function clearImages
+
+   // register event listeners
+   function registerListeners()
+   {
+      document.getElementById( "TorontoMapleLeafs" ).addEventListener(
+         "click", function() { getImages( "TorontoMapleLeafs.xml" ); }, false ); 
+      document.getElementById( "EdmontonOilers" ).addEventListener(
+         "click", function() { getImages( "EdmontonOilers.xml" ); }, false ); 
+      document.getElementById( "TorontoBlueJays" ).addEventListener(
+         "click", function() { getImages( "TorontoBlueJays.xml" ); }, false ); 
+      document.getElementById( "TorontoRaptors" ).addEventListener(
+         "click", function() { getImages( "TorontoRaptors.xml" ); }, false ); 
+      document.getElementById( "WinnipegJets" ).addEventListener(
+         "click", function() { getImages( "WinnipegJets.xml" ); }, false ); 
+         document.getElementById( "VancouverWhitecaps" ).addEventListener(
+         "click", function() { getImages( "VancouverWhitecaps.xml" ); }, false ); 
+      document.getElementById( "none" ).addEventListener(
+         "click", clearImages, false ); 
+   } // end function registerListeners
+
+   window.addEventListener( "load", registerListeners, false );
+   </script>
+</head>
+<body>
+   <h1>Mouse over a book for more information.</h1>
+   <img id = "TorontoMapleLeafs" alt = "Toronto Maple Leafs"
+      src = "https://github.com/archovatiya/images-thumbs/blob/main/TorontoMapleLeafs.png">
+   <img id = "EdmontonOilers" alt = "EdmontonOilers"
+      src = "https://github.com/archovatiya/images-thumbs/blob/main/EdmontonOilers.png">
+   <img id = "TorontoBlueJays" alt = "TorontoBlueJays"
+      src = "https://github.com/archovatiya/images-thumbs/blob/main/TorontoBlueJays.png">
+   <img id = "TorontoRaptors" alt = "TorontoRaptors"
+      src = "https://github.com/archovatiya/images-thumbs/blob/main/TorontoRaptors.jpg">
+   <img id = "WinnipegJets" alt = "WinnipegJets" 
+      src = "https://github.com/archovatiya/images-thumbs/blob/main/WinnipegJets.png">
+   <img id = "VancouverWhitecaps" alt = "VancouverWhitecaps"
+      src = "https://github.com/archovatiya/images-thumbs/blob/main/VancouverWhitecaps.png">
+   <div id = "covers"></div>
+</body>
+</html>
+
